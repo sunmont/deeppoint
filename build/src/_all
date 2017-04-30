@@ -1,0 +1,35 @@
+Scanning dependencies of target server_ssl
+[ 25%] Building CXX object src/CMakeFiles/server_ssl.dir/server_ssl.cpp.o
+/home/dev/git/deeppoint/src/server_ssl.cpp:23:22: warning: capture of variable ‘_server’ with non-automatic storage duration
+ auto default_post = [_server](shared_ptr<HttpsServer::Response> response, shared_ptr<HttpsServer::Request> request) {
+                      ^~~~~~~
+/home/dev/git/deeppoint/src/server_ssl.cpp:22:30: note: ‘std::shared_ptr<SimpleWeb::Server<boost::asio::ssl::stream<boost::asio::basic_stream_socket<boost::asio::ip::tcp> > > > _server’ declared here
+ std::shared_ptr<HttpsServer> _server;
+                              ^~~~~~~
+/home/dev/git/deeppoint/src/server_ssl.cpp:29:22: warning: capture of variable ‘_server’ with non-automatic storage duration
+  auto default_get = [_server](shared_ptr<HttpsServer::Response> response, shared_ptr<HttpsServer::Request> request) {
+                      ^~~~~~~
+/home/dev/git/deeppoint/src/server_ssl.cpp:22:30: note: ‘std::shared_ptr<SimpleWeb::Server<boost::asio::ssl::stream<boost::asio::basic_stream_socket<boost::asio::ip::tcp> > > > _server’ declared here
+ std::shared_ptr<HttpsServer> _server;
+                              ^~~~~~~
+/home/dev/git/deeppoint/src/server_ssl.cpp: In member function ‘bool config::initialize(const ptree&)’:
+/home/dev/git/deeppoint/src/server_ssl.cpp:103:9: warning: no return statement in function returning non-void [-Wreturn-type]
+         }
+         ^
+/home/dev/git/deeppoint/src/server_ssl.cpp: In member function ‘bool config::initialize(const string&)’:
+/home/dev/git/deeppoint/src/server_ssl.cpp:108:9: warning: no return statement in function returning non-void [-Wreturn-type]
+         }
+         ^
+/home/dev/git/deeppoint/src/server_ssl.cpp: In function ‘int main(int, char**)’:
+/home/dev/git/deeppoint/src/server_ssl.cpp:122:27: warning: capture of variable ‘_server’ with non-automatic storage duration
+     thread server_thread([_server](){
+                           ^~~~~~~
+/home/dev/git/deeppoint/src/server_ssl.cpp:22:30: note: ‘std::shared_ptr<SimpleWeb::Server<boost::asio::ssl::stream<boost::asio::basic_stream_socket<boost::asio::ip::tcp> > > > _server’ declared here
+ std::shared_ptr<HttpsServer> _server;
+                              ^~~~~~~
+/home/dev/git/deeppoint/src/server_ssl.cpp:113:14: warning: unused parameter ‘argc’ [-Wunused-parameter]
+ int main(int argc, char **argv) {
+              ^~~~
+[ 50%] Linking CXX executable server_ssl
+[ 50%] Built target server_ssl
+[100%] Built target server

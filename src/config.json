@@ -1,0 +1,17 @@
+
+{
+    "ssl_cert": "server.crt",
+    "ssl_key": "server.key",
+    "port": 8080,
+    "handlers":
+    {
+        "default_get": {
+            "path": null,
+            "verb": "GET"
+        },
+        "default_put": {
+            "path": null,
+            "verb": "PUT"
+        }
+    }
+}

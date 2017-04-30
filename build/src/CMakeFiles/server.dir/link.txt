@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11 -Wall -Wextra -fstack-protector-all -DHAVE_OPENSSL   CMakeFiles/server.dir/server.cpp.o  -o server -rdynamic -lboost_system -lboost_thread -lboost_filesystem -lboost_date_time -lboost_chrono -lboost_atomic -lpthread -lpthread 
